@@ -1,0 +1,13 @@
+dbt_demo:
+  outputs:
+    dev:
+      account: mxpwnkn-svb49417
+      database: RAW
+      password: dbtPassword123
+      role: transform
+      schema: AIRBNB
+      threads: 1
+      type: snowflake
+      user: dbt
+      warehouse: COMPUTE_WH
+  target: dev
