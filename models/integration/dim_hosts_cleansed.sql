@@ -1,3 +1,5 @@
+{{config(materialized = 'view')}} 
+
 SELECT
     host_id,
     NVL(
@@ -8,4 +10,4 @@ SELECT
     created_at,
     updated_at
 FROM
-    stg.airbnb.src_hosts;
+    {{ ref('src_hosts') }}
